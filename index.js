@@ -39,8 +39,8 @@ function sendTextMessage(sender, text) {
     })
 }
 
-function sendGenericMessage(sender) {
-  	//if (text === 'Menus' || text === 'menus' || text === 'menu' || text == 'Menu') {
+function sendGenericMessage(sender, text) {
+  	if (text === 'Menus' || text === 'menus' || text === 'menu' || text == 'Menu') {
     let messageData = {
 	    "attachment": {
 		    "type": "template",
@@ -92,7 +92,7 @@ function sendGenericMessage(sender) {
 		    }
 	    }
     }
-//}
+}
                                                                             
 
     request({
@@ -120,7 +120,7 @@ function sendGenericMessage(sender) {
       if (event.message && event.message.text) {
   	    let text = event.message.text
   	    if (text === 'Menus' || text === 'menus' || text === 'menu' || text == 'Menu') {
-  		    sendGenericMessage(sender)
+  		    sendGenericMessage(sender, text)
   		    continue
   	    }
   	    sendTextMessage(sender, "To get started, respond with 'Menus'")
