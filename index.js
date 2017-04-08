@@ -55,8 +55,12 @@ function sendGenericMessage(sender) {
 					    "title": "Website Menu"
 				    }, {
 					    "type": "postback",
-					    "title": "Send Menu as Message",
+					    "title": "Newcomb Menu as Message",
 					    "payload": "Newcomb",
+				    }, {
+				    	"type": "postback",
+				    	"title": "Hours of Operation",
+				    	"payload": "Newc_Hours",
 				    }],
 			    }, {
 				    "title": "Observatory Hill Dining Room",
@@ -68,8 +72,12 @@ function sendGenericMessage(sender) {
 				    	"title": "Website Menu"
 				    }, {
 					    "type": "postback",
-					    "title": "Send Menu as Message",
+					    "title": "Ohill Menu as Message",
 					    "payload": "Ohill",
+					}, {
+						"type": "postback",
+						"title": "Hours of Operation",
+						"payload": "Ohill_Hours",
 					}
 				    ],
 			    },{
@@ -82,8 +90,12 @@ function sendGenericMessage(sender) {
 				    	"title": "Website Menu"
 				    }, {
 					    "type": "postback",
-					    "title": "Send Menu as Message",
+					    "title": "Runk Menu as Message",
 					    "payload": "Runk",
+					}, {
+						"type": "postback",
+						"title": "Hours of Operation",
+						"payload": "Runk_Hours",
 					}
 				    ],
 			    }
