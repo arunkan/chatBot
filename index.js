@@ -127,11 +127,11 @@ function sendGenericMessage(sender) {
       let sender = event.sender.id
       if (event.message && event.message.text) {
   	    let text = event.message.text
-  	    if (text === 'Menus') {
+  	    if (text === 'Menus' || text === 'menus' || text === 'menu' || text == 'Menu') {
   		    sendGenericMessage(sender)
   		    continue
   	    }
-  	    sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+  	    sendTextMessage(sender, "To get started, respond with 'Menus'")
       }
       if (event.postback) {
   	    let text = JSON.stringify(event.postback)
@@ -153,7 +153,7 @@ Saturday-Sunday: 8:00 am - 9:00 pm`
 
 	    if (text === 'Runk_Hours') {
 	    	text = `Runk Dining Hall Hours of Operation
-	    	
+
 Monday-Thursday: 7:00 am - 10:00 pm 
 Friday: 7:00 am - 8:00 pm
 Saturday-Sunday: 10:00 am - 8:00 pm`
