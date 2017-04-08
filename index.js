@@ -147,12 +147,13 @@ Sunday: 10:00 am - 8:00 pm`
   	    if (text === 'Ohill_Hours'){
   	    	text = `Observatory Hill Hours of Operation
 
-  	    	Monday-Friday: 7:00 am - 9:00 pm
+Monday-Friday: 7:00 am - 9:00 pm
 Saturday-Sunday: 8:00 am - 9:00 pm`
 	    }
 
 	    if (text === 'Runk_Hours') {
-	    	text = `Monday-Thursday: 7:00 am - 10:00 pm 
+	    	text = `Runk Dining Hall Hours of Operation
+Monday-Thursday: 7:00 am - 10:00 pm 
 Friday: 7:00 am - 8:00 pm
 Saturday-Sunday: 10:00 am - 8:00 pm`
 	    }
