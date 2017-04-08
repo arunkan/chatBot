@@ -39,8 +39,7 @@ function sendTextMessage(sender, text) {
     })
 }
 
-function sendGenericMessage(sender, text) {
-	res.send(text);
+function sendGenericMessage(sender) {
     let messageData = {
 	    "attachment": {
 		    "type": "template",
@@ -120,7 +119,7 @@ function sendGenericMessage(sender, text) {
       if (event.message && event.message.text) {
   	    let text = event.message.text
   	    if (text === 'Menus' || text === 'menus' || text === 'menu' || text === 'Menu') {
-  		    sendGenericMessage(sender, text)
+  		    sendGenericMessage(sender)
   		    continue
   	    }
   	    sendTextMessage(sender, "To get started, respond with 'Menus'")
