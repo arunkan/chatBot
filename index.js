@@ -48,7 +48,7 @@ function sendGenericMessage(sender) {
 			    "elements": [{
 					"title": "First card",
 				    "subtitle": "Element #1 of an hscroll",
-				    "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+				    "image_url": "https://pbs.twimg.com/profile_images/414108338016620544/LtEtl9vl_400x400.png",
 				    "buttons": [{
 					    "type": "web_url",
 					    "url": "https://www.messenger.com",
@@ -58,19 +58,11 @@ function sendGenericMessage(sender) {
 					    "title": "Postback",
 					    "payload": "Payload for first element in a generic bubble",
 				    }],
-			    }, {
-				    "title": "Second card",
-				    "subtitle": "Element #2 of an hscroll",
-				    "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
-				    "buttons": [{
-					    "type": "postback",
-					    "title": "Postback",
-					    "payload": "Payload for second element in a generic bubble",
-				    }],
-			    }]
+			    }
 		    }
 	    }
     }
+}
     request({
 	    url: 'https://graph.facebook.com/v2.6/me/messages',
 	    qs: {access_token:token},
