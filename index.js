@@ -46,16 +46,16 @@ function sendGenericMessage(sender) {
 		    "payload": {
 				"template_type": "generic",
 			    "elements": [{
-					"title": "Fresh Food Company",
+					"title": "Newcomb Dining Hall",
 				    "subtitle": "This 35,000-square-foot renovated facility opened in January 2013 in Newcomb Hall. There are eight prepared-to-order stations, including Mongolian Grill, Deli, Vegan Station, Produce & Salad Bar, and much more! UVa students have embraced the 'new' Newcomb and laud its menu choices as well as its comfortable and fun dining atmosphere.",
 				    "image_url": "https://news.virginia.edu/sites/default/files/article_image/NewcombDining011413_01.jpeg",
 				    "buttons": [{
 					    "type": "web_url",
 					    "url": "http://virginia.campusdish.com/Commerce/Catalog/Menus.aspx?LocationId=704",
-					    "title": "Website Menu"
+					    "title": "Website"
 				    }, {
 					    "type": "postback",
-					    "title": "Newcomb Menu as Message",
+					    "title": "Send Newcomb Menu",
 					    "payload": "Newcomb",
 				    }, {
 				    	"type": "postback",
@@ -69,10 +69,10 @@ function sendGenericMessage(sender) {
 				    "buttons": [{
 				    	"type": "web_url",
 				    	"url": "https://www.fm.virginia.edu/fpc/featuredprojects/OHillDining/Photos/Renderings/OhillDiningEntry.jpg",
-				    	"title": "Website Menu"
+				    	"title": "Website"
 				    }, {
 					    "type": "postback",
-					    "title": "Ohill Menu as Message",
+					    "title": "Send Ohill Menu",
 					    "payload": "Ohill",
 					}, {
 						"type": "postback",
@@ -87,10 +87,10 @@ function sendGenericMessage(sender) {
 				    "buttons": [{
 				    	"type": "web_url",
 				    	"url": "http://virginia.campusdish.com/Commerce/Catalog/Menus.aspx?LocationId=701",
-				    	"title": "Website Menu"
+				    	"title": "Website"
 				    }, {
 					    "type": "postback",
-					    "title": "Runk Menu as Message",
+					    "title": "Send Runk Menu",
 					    "payload": "Runk",
 					}, {
 						"type": "postback",
@@ -135,7 +135,8 @@ function sendGenericMessage(sender) {
       }
       if (event.postback) {
   	    let text = JSON.stringify(event.postback)
-  	    sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
+  	    text = text.substring(12, text.length - 2)
+  	    sendTextMessage(sender, text.substring(0, 200), token)
   	    continue
       }
     }
