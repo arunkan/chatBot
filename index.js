@@ -118,7 +118,7 @@ function sendGenericMessage(sender) {
       let sender = event.sender.id
       if (event.message && event.message.text) {
   	    let text = event.message.text
-  	    if (text === 'Menus' || text === 'menus' || text === 'menu' || text == 'Menu') {
+  	    if (text === 'Menus' || text === 'menus' || text === 'menu' || text === 'Menu') {
   		    sendGenericMessage(sender)
   		    continue
   	    }
