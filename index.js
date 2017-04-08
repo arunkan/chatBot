@@ -138,11 +138,24 @@ function sendGenericMessage(sender) {
   	    text = text.substring(12, text.length - 2)
   	    if (text === 'Newc_Hours') {
   	    	text = `Newcomb Dining Hall Hours of Operation
+
 Monday-Thursday: 7:00 am - 8:00 pm
 Friday: 7:00 am - 2:15 pm
 Saturday: 10:00 am - 2:00 pm
 Sunday: 10:00 am - 8:00 pm`
   	    }
+  	    if (text === 'Ohill_Hours'){
+  	    	text = `Observatory Hill Hours of Operation
+
+  	    	Monday-Friday: 7:00 am - 9:00 pm
+Saturday-Sunday: 8:00 am - 9:00 pm`
+	    }
+
+	    if (text === 'Runk_Hours') {
+	    	text = `Monday-Thursday: 7:00 am - 10:00 pm 
+Friday: 7:00 am - 8:00 pm
+Saturday-Sunday: 10:00 am - 8:00 pm`
+	    }
   	    sendTextMessage(sender, text.substring(0, 200), token)
   	    continue
       }
