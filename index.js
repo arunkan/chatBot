@@ -40,7 +40,6 @@ function sendTextMessage(sender, text) {
 }
 
 function sendGenericMessage(sender, text) {
-  	if (text === 'Menus' || text === 'menus' || text === 'menu' || text == 'Menu') {
     let messageData = {
 	    "attachment": {
 		    "type": "template",
@@ -92,7 +91,7 @@ function sendGenericMessage(sender, text) {
 		    }
 	    }
     }
-}
+
                                                                             
 
     request({
