@@ -46,18 +46,32 @@ function sendGenericMessage(sender) {
 		    "payload": {
 				"template_type": "generic",
 			    "elements": [{
-					"title": "First card",
-				    "subtitle": "Element #1 of an hscroll",
-				    "image_url": "https://pbs.twimg.com/profile_images/414108338016620544/LtEtl9vl_400x400.png",
+					"title": "Fresh Food Company",
+				    "subtitle": "This 35,000-square-foot renovated facility opened in January 2013 in Newcomb Hall. There are eight prepared-to-order stations, including Mongolian Grill, Deli, Vegan Station, Produce & Salad Bar, and much more! UVa students have embraced the 'new' Newcomb and laud its menu choices as well as its comfortable and fun dining atmosphere.",
+				    "image_url": "https://news.virginia.edu/sites/default/files/article_image/NewcombDining011413_01.jpeg",
 				    "buttons": [{
 					    "type": "web_url",
-					    "url": "https://www.messenger.com",
-					    "title": "web url"
+					    "url": "http://virginia.campusdish.com/Commerce/Catalog/Menus.aspx?LocationId=704",
+					    "title": "Website Menu"
+				    }, {
+					    "type": "postback",
+					    "title": "Send Menu as Message",
+					    "payload": "Newcomb Menu",
+				    }],
+			    }, {
+				    "title": "Observatory Hill Dining Room",
+				    "subtitle": "Observatory Hill is located on the southwestern corner of Alderman and McCormick Roads near the first-year residences. More commonly known as O'Hill, this dining room has a large seating area with two levels, and eight stations to choose from! ",
+				    "image_url": "http://virginia.campusdish.com/-/media/Images/Aramark/Higher-Education/Eastern/Virginia/Location/ObservatoryHill-Dining-225x150.jpg?h=150&la=en&w=222&hash=59AFD7D6FE0377A53E164559A695BD8388577DFB",
+				    "buttons": [{
+				    	"type": "web_url",
+				    	"url": "http://virginia.campusdish.com/Commerce/Catalog/Menus.aspx?LocationId=695",
+				    	"title": "Website Menu"
 				    }, {
 					    "type": "postback",
 					    "title": "Postback",
-					    "payload": "Payload for first element in a generic bubble",
-				    }]
+					    "payload": "Payload for second element in a generic bubble",
+					}
+				    ],
 			    }]
 		    }
 	    }
@@ -86,7 +100,7 @@ function sendGenericMessage(sender) {
       let sender = event.sender.id
       if (event.message && event.message.text) {
   	    let text = event.message.text
-  	    if (text === 'Generic') {
+  	    if (text === 'Menus') {
   		    sendGenericMessage(sender)
   		    continue
   	    }
