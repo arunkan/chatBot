@@ -56,7 +56,7 @@ function sendGenericMessage(sender) {
 				    }, {
 					    "type": "postback",
 					    "title": "Send Menu as Message",
-					    "payload": "Newcomb Menu",
+					    "payload": "Newcomb",
 				    }],
 			    }, {
 				    "title": "Observatory Hill Dining Room",
@@ -64,15 +64,30 @@ function sendGenericMessage(sender) {
 				    "image_url": "http://virginia.campusdish.com/-/media/Images/Aramark/Higher-Education/Eastern/Virginia/Location/ObservatoryHill-Dining-225x150.jpg?h=150&la=en&w=222&hash=59AFD7D6FE0377A53E164559A695BD8388577DFB",
 				    "buttons": [{
 				    	"type": "web_url",
-				    	"url": "http://virginia.campusdish.com/Commerce/Catalog/Menus.aspx?LocationId=695",
+				    	"url": "https://www.fm.virginia.edu/fpc/featuredprojects/OHillDining/Photos/Renderings/OhillDiningEntry.jpg",
 				    	"title": "Website Menu"
 				    }, {
 					    "type": "postback",
-					    "title": "Postback",
-					    "payload": "Payload for second element in a generic bubble",
+					    "title": "Send Menu as Message",
+					    "payload": "Ohill",
 					}
 				    ],
-			    }]
+			    },{
+				    "title": "Runk Dining Room",
+				    "subtitle": "Runk Dining is open to all, but mainly serves the Hereford College and Gooch/Dillard residents. It's convenient to the Student Activities Building, the Piedmont Faculty Housing area, and the McCormick Observatory.",
+				    "image_url": "http://www.globalsustainability.virginia.edu/wp-content/uploads/2014/07/1782519_10204400187669979_8875502862353311649_o-1024x768.jpg",
+				    "buttons": [{
+				    	"type": "web_url",
+				    	"url": "http://virginia.campusdish.com/Commerce/Catalog/Menus.aspx?LocationId=701",
+				    	"title": "Website Menu"
+				    }, {
+					    "type": "postback",
+					    "title": "Send Menu as Message",
+					    "payload": "Runk",
+					}
+				    ],
+			    }
+			    ]
 		    }
 	    }
     }
