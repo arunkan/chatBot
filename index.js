@@ -52,11 +52,7 @@ function sendGenericMessage(sender) {
 				    "buttons": [{
 					    "type": "web_url",
 					    "url": "http://virginia.campusdish.com/Commerce/Catalog/Menus.aspx?LocationId=704",
-					    "title": "Website"
-				    }, {
-					    "type": "postback",
-					    "title": "Send Newcomb Menu",
-					    "payload": "Newcomb",
+					    "title": "See Menu"
 				    }, {
 				    	"type": "postback",
 				    	"title": "Hours of Operation",
@@ -69,12 +65,8 @@ function sendGenericMessage(sender) {
 				    "buttons": [{
 				    	"type": "web_url",
 				    	"url": "https://www.fm.virginia.edu/fpc/featuredprojects/OHillDining/Photos/Renderings/OhillDiningEntry.jpg",
-				    	"title": "Website"
+				    	"title": "See Menu"
 				    }, {
-					    "type": "postback",
-					    "title": "Send Ohill Menu",
-					    "payload": "Ohill",
-					}, {
 						"type": "postback",
 						"title": "Hours of Operation",
 						"payload": "Ohill_Hours",
@@ -87,12 +79,8 @@ function sendGenericMessage(sender) {
 				    "buttons": [{
 				    	"type": "web_url",
 				    	"url": "http://virginia.campusdish.com/Commerce/Catalog/Menus.aspx?LocationId=701",
-				    	"title": "Website"
+				    	"title": "See Menu"
 				    }, {
-					    "type": "postback",
-					    "title": "Send Runk Menu",
-					    "payload": "Runk",
-					}, {
 						"type": "postback",
 						"title": "Hours of Operation",
 						"payload": "Runk_Hours",
