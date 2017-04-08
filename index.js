@@ -14,12 +14,12 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // Index route
- app.get('/', function (req, res) {
+ app.get('/webhook/', function (req, res) {
  	res.send('Hello world, I am a chat bot')
  })
 
-// for Facebook verification
-app.post('/webhook/', function (req, res) {
+// for Facebook verifications
+app.post('/', function (req, res) {
     let messaging_events = req.body.entry[0].messaging
     for (let i = 0; i < messaging_events.length; i++) {
 	    let event = req.body.entry[0].messaging[i]
