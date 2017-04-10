@@ -1,1 +1,1 @@
-# chatBot
+This project is simply a Facebook chatBot, that when prompted, will send links to UVa Dining Halls to see the menu for the day, or will respond with the hours operation for specific dining halls on that specific day.
