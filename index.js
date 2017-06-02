@@ -158,8 +158,8 @@ function sendGenericMessage(sender) {
   		    sendGenericMessage(sender)
   		    continue
   	    }
-  	    sendAPIMessage(text, sender)
-  	    //sendTextMessage(sender, "To get started, respond with 'Menus'")
+  	    //sendAPIMessage(text, sender)
+  	    sendTextMessage(sender, "To get started, respond with 'Menus'")
       }
       if (event.postback) {
   	    let text = JSON.stringify(event.postback)
