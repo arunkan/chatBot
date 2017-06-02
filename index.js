@@ -50,7 +50,7 @@ function sendAPIMessage(text, sender) {
     let messageData = { text:text }
 	api_ai_request.on('response', function(response1) {
 	    let tempmessageData = response.result.fulfillment.speech;
-	    messageData = { tempmessageData:tempmessageData }
+	    messageData = { text:tempmessageData }
 	});
 	 
 	api_ai_request.on('error', function(error) {
