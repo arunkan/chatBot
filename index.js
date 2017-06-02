@@ -1,7 +1,6 @@
 'use strict'
 //This is for api.ai 
 //var apiai = require('apiai');
- 
 //var app = apiai("bed11a56f16e496c8f92c9995e4c6fcc");
 
 //this is for rest of the program
@@ -192,6 +191,11 @@ Saturday-Sunday: 10:00 am - 8:00 pm`
     }
     res.sendStatus(200)
   })
+
+
+
+var apiai = require('apiai');
+var app = apiai("bed11a56f16e496c8f92c9995e4c6fcc");
 
 const token = "EAACOO8yuxj8BACBe3m2cSg6R0UBJJNE3LGEPfJgdhaztZCCRYxMK0g5gEqh5uZC44h1somOhY8d8NODbnmQfk9Co0wV9i8DSxUCNZBKguBfb7RVWsQZA8NDwtyC7RHOCB4JcmhCjtjFXzcRZAZAw7b81RQtpW1MvAIWKU3d0M0gAZDZD"
 // Spin up the server
