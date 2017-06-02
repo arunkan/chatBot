@@ -4,6 +4,8 @@
 //var app = apiai("bed11a56f16e496c8f92c9995e4c6fcc");
 
 //this is for rest of the program
+const app1 = require('apiai')("bed11a56f16e496c8f92c9995e4c6fcc");
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
@@ -45,7 +47,7 @@ function sendTextMessage(sender, text) {
 
 function sendAPIMessage(text, sender) {
 	 let messageData = { text:text }
-		let api_ai_request = app1.textRequest(text, {
+		var api_ai_request = app1.textRequest(text, {
 	    sessionId: '1234567890'
 	});
 
@@ -194,10 +196,6 @@ Saturday-Sunday: 10:00 am - 8:00 pm`
     }
     res.sendStatus(200)
   })
-
-
-const app1 = require('apiai')("bed11a56f16e496c8f92c9995e4c6fcc");
-
 
 const token = "EAACOO8yuxj8BACBe3m2cSg6R0UBJJNE3LGEPfJgdhaztZCCRYxMK0g5gEqh5uZC44h1somOhY8d8NODbnmQfk9Co0wV9i8DSxUCNZBKguBfb7RVWsQZA8NDwtyC7RHOCB4JcmhCjtjFXzcRZAZAw7b81RQtpW1MvAIWKU3d0M0gAZDZD"
 // Spin up the server
