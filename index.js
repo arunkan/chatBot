@@ -44,15 +44,15 @@ function sendTextMessage(sender, text) {
 }
 
 function sendAPIMessage(text, sender) {
-		let request = app.textRequest(text, {
+		let request = app1.textRequest(text, {
 	    sessionId: '1234567890'
 	});
 	 
-	request.on('response', function(response) {
+	request.on('response', function(response1) {
 	    let messageData = response.result.fulfillment.speech;
 	});
 	 
-	request.on('error', function(error) {
+	request.on('error', function(error1) {
 	    console.log(error);
 	});
 	 
@@ -194,7 +194,7 @@ Saturday-Sunday: 10:00 am - 8:00 pm`
   })
 
 
-const app = require('apiai')("bed11a56f16e496c8f92c9995e4c6fcc");
+const app1 = require('apiai')("bed11a56f16e496c8f92c9995e4c6fcc");
 
 
 const token = "EAACOO8yuxj8BACBe3m2cSg6R0UBJJNE3LGEPfJgdhaztZCCRYxMK0g5gEqh5uZC44h1somOhY8d8NODbnmQfk9Co0wV9i8DSxUCNZBKguBfb7RVWsQZA8NDwtyC7RHOCB4JcmhCjtjFXzcRZAZAw7b81RQtpW1MvAIWKU3d0M0gAZDZD"
