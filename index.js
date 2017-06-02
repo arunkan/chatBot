@@ -47,7 +47,7 @@ function sendTextMessage(sender, text) {
 
 function sendAPIMessage(text, sender) {
 	 let messageData = { text:text }
-		var api_ai_request = app1.textRequest(text, {
+		let api_ai_request = app1.textRequest(text, {
 	    sessionId: '1234567890'
 	});
 
