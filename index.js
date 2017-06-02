@@ -44,11 +44,12 @@ function sendTextMessage(sender, text) {
 }
 
 function sendAPIMessage(text, sender) {
+	 let messageData = { text:text }
 		let api_ai_request = app1.textRequest(text, {
 	    sessionId: '1234567890'
 	});
-    let messageData = { text:text }
-	api_ai_request.on('response', function(response1) {
+
+	api_ai_request.on('response', function(response) {
 	    let tempmessageData = response.result.fulfillment.speech;
 	    messageData = { text:tempmessageData }
 	});
