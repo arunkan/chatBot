@@ -43,37 +43,38 @@ function sendTextMessage(sender, text) {
     })
 }
 
-// function sendAPIMessage(text, sender) {
-// 		var request = app.textRequest('22903', {
-// 	    sessionId: '1'
-// 	});
+function sendAPIMessage(text, sender) {
+		var request = app.textRequest('22903', {
+	    sessionId: '1'
+	});
 	 
-// 	request.on('response', function(response) {
-// 	    messageData = response.result.fulfillment.speech;
-// 	});
+	request.on('response', function(response) {
+	    messageData = response.result.fulfillment.speech;
+	});
 	 
-// 	request.on('error', function(error) {
-// 	    console.log(error);
-// 	});
+	request.on('error', function(error) {
+	    console.log(error);
+	});
 	 
-// 	request({
-// 		    url: 'https://graph.facebook.com/v2.6/me/messages',
-// 		    qs: {access_token:token},
-// 		    method: 'POST',
-// 		    json: {
-// 			    recipient: {id:sender},
-// 			    message: messageData,
-// 		    }
-// 	    }, function(error, response, body) {
-// 		    if (error) {
-// 			    console.log('Error sending messages: ', error)
-// 		    } else if (response.body.error) {
-// 			    console.log('Error: ', response.body.error)
-// 		    }
-// 	    })
+	request({
+		    url: 'https://graph.facebook.com/v2.6/me/messages',
+		    qs: {access_token:token},
+		    method: 'POST',
+		    json: {
+			    recipient: {id:sender},
+			    message: messageData,
+		    }
+	    }, function(error, response, body) {
+		    if (error) {
+			    console.log('Error sending messages: ', error)
+		    } else if (response.body.error) {
+			    console.log('Error: ', response.body.error)
+		    }
+	    })
 
 
-// }
+}
+
 function sendGenericMessage(sender) {
     let messageData = {
 	    "attachment": {
@@ -157,8 +158,8 @@ function sendGenericMessage(sender) {
   		    sendGenericMessage(sender)
   		    continue
   	    }
-  	    //sendAPIMessage(text, sender)
-  	    sendTextMessage(sender, "To get started, respond with 'Menus'")
+  	    sendAPIMessage(text, sender)
+  	    //sendTextMessage(sender, "To get started, respond with 'Menus'")
       }
       if (event.postback) {
   	    let text = JSON.stringify(event.postback)
