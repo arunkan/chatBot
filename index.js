@@ -44,7 +44,7 @@ function sendTextMessage(sender, text) {
 }
 
 function sendAPIMessage(text, sender) {
-		var request = app.textRequest('22903', {
+		var request = app.textRequest(text, {
 	    sessionId: '1'
 	});
 	 
@@ -158,8 +158,8 @@ function sendGenericMessage(sender) {
   		    sendGenericMessage(sender)
   		    continue
   	    }
-  	    //sendAPIMessage(text, sender)
-  	    sendTextMessage(sender, "To get started, respond with 'Menus'")
+  	    sendAPIMessage(text, sender)
+  	    //sendTextMessage(sender, "To get started, respond with 'Menus'")
       }
       if (event.postback) {
   	    let text = JSON.stringify(event.postback)
@@ -193,7 +193,7 @@ Saturday-Sunday: 10:00 am - 8:00 pm`
     res.sendStatus(200)
   })
 
-const apiaiApp = require('apiai')("bed11a56f16e496c8f92c9995e4c6fcc");
+const app = require('apiai')("bed11a56f16e496c8f92c9995e4c6fcc");
 
 
 const token = "EAACOO8yuxj8BACBe3m2cSg6R0UBJJNE3LGEPfJgdhaztZCCRYxMK0g5gEqh5uZC44h1somOhY8d8NODbnmQfk9Co0wV9i8DSxUCNZBKguBfb7RVWsQZA8NDwtyC7RHOCB4JcmhCjtjFXzcRZAZAw7b81RQtpW1MvAIWKU3d0M0gAZDZD"
