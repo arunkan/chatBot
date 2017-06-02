@@ -1,8 +1,8 @@
 'use strict'
 //This is for api.ai 
-var apiai = require('apiai');
+//var apiai = require('apiai');
  
-var app = apiai("bed11a56f16e496c8f92c9995e4c6fcc");
+//var app = apiai("bed11a56f16e496c8f92c9995e4c6fcc");
 
 //this is for rest of the program
 const express = require('express')
