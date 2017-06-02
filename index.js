@@ -59,6 +59,8 @@ function sendAPIMessage(text, sender) {
 	api_ai_request.on('error', function(error) {
 	    console.log(error);
 	});
+
+	api_ai_request.end();
 	 
 	request({
 		    url: 'https://graph.facebook.com/v2.6/me/messages',
