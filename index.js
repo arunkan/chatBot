@@ -60,7 +60,7 @@ function sendAPIMessage(text, sender) {
 	    console.log(error);
 	});
 
-	api_ai_request.end();
+	api_ai_request.end()
 	 
 	request({
 		    url: 'https://graph.facebook.com/v2.6/me/messages',
